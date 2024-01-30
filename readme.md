@@ -9,5 +9,5 @@
 - Ir a `localhost:8000/docs`
 - Probar las CRUDS!
 ### Consideraciones
-- Las variable de entorno esta dockerizada, `DATABASE_URL` se encuentra en el archivo `docker-compose.yaml`
+- Las variables de entornos estan dockerizadas. `DATABASE_URL` se encuentra en el archivo `docker-compose.yaml`
 
