@@ -22,7 +22,7 @@ create_tables()
 async def create_chequera(
     chequera: schemaChequera.BaseChequera, 
     db: Session = Depends(services.get_db)):
-    crudChequera.check_create_conditions(chequera)
+    crudChequera.validate_create_conditions(chequera)
     return await crudChequera.create_chequera(db, chequera)
 
 @app.get("/api/chequeras/", response_model=List[schemaChequera.Chequera])
