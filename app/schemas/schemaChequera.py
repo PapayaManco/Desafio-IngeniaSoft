@@ -1,5 +1,4 @@
 import pydantic as pydantic
-from pydantic import validator
 
 class BaseChequera(pydantic.BaseModel):
     nombre_banco: str

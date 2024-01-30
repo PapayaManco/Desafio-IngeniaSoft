@@ -10,4 +10,5 @@
 - Probar las CRUDS!
 ### Consideraciones
 - Las variables de entornos estan dockerizadas. `DATABASE_URL` se encuentra en el archivo `docker-compose.yaml`
+- La diferencia entre rango minimo y maximo se le resta uno, ya que por ejemplo entre 30 y 0 hay 31 valores.
 
