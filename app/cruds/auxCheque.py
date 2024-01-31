@@ -29,7 +29,11 @@ def find_cheque_in_chequera(chequera, new_cheque_number):
     return None
 
 def validate_update_cheque(db, cheque: schema.BaseCheque, cheque_id: int):
+    find_cheque_id(db, cheque_id)
+    validate_create_cheque(db, cheque)
+
+def find_cheque_id(db, cheque_id):
     cheque_db = db.query(modelChequera.Cheque).filter(modelChequera.Cheque.id == cheque_id).first()
     if cheque_db is None:
         raise HTTPException(status_code=404, detail="Cheque no encontrado.")
-    validate_create_cheque(db, cheque)
+    return cheque_db
