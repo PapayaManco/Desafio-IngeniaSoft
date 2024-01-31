@@ -9,7 +9,7 @@
 - Ir a `localhost:8000/docs`
 - Probar las CRUDS!
 - Para detener el contenedor correr `docker-compose down`
-- Para salir del enotrno virtual, correr `deactivate`
+- Para salir del entorno virtual, correr `deactivate`
 
 ### Consideraciones
 - Las variables de entornos estan dockerizadas. `DATABASE_URL` se encuentra en el archivo `docker-compose.yaml`
