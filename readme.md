@@ -13,7 +13,7 @@
 
 ### Consideraciones
 - Las variables de entornos estan dockerizadas. `DATABASE_URL` se encuentra en el archivo `docker-compose.yaml`
-- La diferencia entre rango minimo y maximo se le resta uno, ya que por ejemplo entre 30 y 0 hay 31 valores.
-- Para el CRUD de Actualizar chequeras solo se puede cambiar el nombre de esta, para evitar conflictos al modificar los rangos.
-- Para el CRUD de Borrar una Chequera, se considero que se debian eliminar los cheques que esta posee.
+- La diferencia entre rango mínimo y máximo se le resta uno, ya que por ejemplo entre 30 y 0 hay 31 valores.
+- Para el CRUD de Actualizar chequeras solo se puede cambiar el nombre de la esta misma, para evitar conflictos al modificar los rangos.
+- Para el CRUD de Borrar una Chequera, se consideró que se debian eliminar los cheques que esta posee.
 - En el CRUD de Actualizar un Cheque, es posible transferir el cheque a otra chequera.

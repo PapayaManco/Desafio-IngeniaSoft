@@ -3,7 +3,7 @@ from typing import List
 from sqlalchemy.orm import Session
 import app.cruds.crudCheque as crudCheque
 import app.schemas.schemaCheque as schemaCheque
-from app.cruds.auxCheque import validate_create_cheque
+from app.cruds.auxCheque import validate_create_cheque, validate_update_cheque
 from app import services
 
 router = APIRouter()
@@ -21,7 +21,7 @@ async def get_cheques(limit: int = 100, db: Session = Depends(services.get_db)):
 
 @router.put("/api/cheques/{cheque_id}", response_model=schemaCheque.Cheque, responses=responses_dict)
 async def update_cheque(cheque_id: int, cheque: schemaCheque.BaseCheque, db: Session = Depends(services.get_db)):
-    validate_create_cheque(db, cheque)
+    validate_update_cheque(db, cheque, cheque_id)
     return await crudCheque.update_cheque(db, cheque_id, cheque)
 
 @router.delete("/api/cheques/{cheque_id}", responses=responses_dict)
