@@ -4,7 +4,7 @@ import app.database as db
 
 def create_tables():
     try:
-        db.engine.connect().execute("SELECT 1 FROM your_table_name LIMIT 1")
+        db.engine.connect().execute("SELECT 1 FROM chequeras LIMIT 1")
     except exc.SQLAlchemyError:
         db.Base.metadata.create_all(bind=db.engine)
 
