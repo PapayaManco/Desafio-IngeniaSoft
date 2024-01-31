@@ -1,4 +1,5 @@
 import pydantic as pydantic
+from .schemaCheque import Cheque
 
 class BaseChequera(pydantic.BaseModel):
     nombre_banco: str
@@ -11,7 +12,12 @@ class Chequera(BaseChequera):
     class Config:
         from_attributes = True
 
+class ChequeraWithCheques(BaseChequera):
+    id: int
+    cheques: list[Cheque]
+    
+    class Config:
+        from_attributes = True
 
-class CreateChequera(BaseChequera):
-    pass
-
+class UpdateChequera(pydantic.BaseModel):
+    nombre_banco: str
