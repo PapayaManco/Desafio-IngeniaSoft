@@ -3,8 +3,8 @@
 - Tener Docker
 - Tener Python 3.9+
 ### Instrucciones
-- Correr `python -m venv venv`, para generar el entorno virtual.
-- Correr `venv\Scripts\Activate`, para ir a un entorno virtual. (Opcional)
+- (Opcional) Correr `python -m venv venv`, para generar el entorno virtual.
+- (Opcional) Correr `venv\Scripts\Activate`, para ir a un entorno virtual. 
 - Correr `docker-compose up -d`
 - Ir a `localhost:8000/docs`
 - Probar las CRUDS!
